@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Anis Sofea</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #34233c;
+      background-image: url('2.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #34233c;
+      padding: 30px;
+      text-align: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #34233c;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #bd5aee;
+      padding: 0;
+      margin: 0;
+      top: 48px;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    nav ul ul li a {
+      padding: 10px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+    }
+
+    .about-wrapper {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 0 30px;
+      flex-grow: 1;
+    }
+
+    .about-content {
+      flex: 1 1 500px;
+      background-color: #3f2a4f;
+      padding: 30px;
+      border: 6px solid #a350a0;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-content h2 {
+      color: #edb4fa;
+      font-size: 32px;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .about-content p {
+      line-height: 1.8;
+      color: #f3e6f7;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .image-box {
+      flex: 0 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .square-img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border: 6px solid #a350a0;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(131, 84, 129, 0.6);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #34233c;
+      color: #FFFFFF;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+      margin-top: auto;
+      border-top: 1px solid #a350a0;
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+      }
+
+      .image-box,
+      .about-content {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>It'smeanissofea</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li>
+        <a href="#">More</a>
+        <ul>
+          <li><a href="achievement.html">Achievement</a></li>
+          <li><a href="interest.html">My Interest</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="about-wrapper">
+    <div class="about-content">
+      <h2>❈ Who Am I?</h2>
+      <p>
+        Hello! I'm Anis Sofea binti Badari, a 21-year-old from Kabong, Sarawak. As the eldest of four siblings, I strive to set a positive example through dedication, growth, and sincerity. I believe that life is not a competition, but a journey of continuous learning. With faith and optimism, I aim to contribute meaningfully to my surroundings while advancing my academic path with purpose.
+      </p>
+    </div>
+
+    <div class="image-box">
+      <img src="FAM.jpg" alt="Anis Sofea and family" class="square-img" />
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Anis Sofea. Thank you for visiting!
+  </footer>
+
+</body>
+</html>
+

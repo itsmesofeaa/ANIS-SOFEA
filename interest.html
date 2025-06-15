@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Interests - Anis Sofea</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #34233c;
+      background-image: url('2.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #34233c;
+      padding: 30px;
+      text-align: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #34233c;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #bd5aee;
+      padding: 0;
+      margin: 0;
+      top: 48px;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    nav ul ul li a {
+      padding: 10px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+    }
+
+    .interest-grid {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      flex-grow: 1;
+    }
+
+    .interest-box {
+      background-color: #3f2a4f;
+      border: 6px solid #a350a0;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .interest-label {
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #edb4fa;
+    }
+
+    .image-box {
+      width: 100%;
+      max-width: 320px;
+      height: 220px;
+      background-color: #eee;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(131, 84, 129, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide-img, .melukis-slide {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .slide-img.active, .melukis-slide.active {
+      display: block;
+    }
+
+    .prev-btn, .next-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 2;
+      user-select: none;
+    }
+
+    .prev-btn { left: 8px; }
+    .next-btn { right: 8px; }
+
+    .yt-video, .interest-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(131, 84, 129, 0.6);
+    }
+
+    .sport-center {
+      grid-column: span 2;
+      justify-self: center;
+      width: 60%;
+      max-width: 640px;
+      height: 300px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #34233c;
+      color: #FFFFFF;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+      margin-top: auto;
+      border-top: 1px solid #a350a0;
+    }
+
+    @media (max-width: 768px) {
+      .interest-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sport-center {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Interests</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li>
+        <a href="#">More</a>
+        <ul>
+          <li><a href="achievement.html">Achievement</a></li>
+          <li><a href="interest.html">My Interest</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="interest-grid">
+
+    <!-- Reading Books -->
+    <div class="interest-box">
+      <div class="image-box slideshow">
+        <img class="slide-img active" src="B.1.jpg" alt="Book 1" />
+        <img class="slide-img" src="B.2.jpg" alt="Book 2" />
+        <img class="slide-img" src="B.3.jpg" alt="Book 3" />
+        <img class="slide-img" src="B.4.jpg" alt="Book 4" />
+        <button class="prev-btn" onclick="changeSlide(-1)">❮</button>
+        <button class="next-btn" onclick="changeSlide(1)">❯</button>
+      </div>
+      <div class="interest-label">Reading Books</div>
+    </div>
+
+    <!-- Drawing -->
+    <div class="interest-box">
+      <div class="image-box slideshow-melukis">
+        <img class="melukis-slide active" src="Art.1.jpg" alt="Drawing 1" />
+        <img class="melukis-slide" src="Art.2.jpg" alt="Drawing 2" />
+        <img class="melukis-slide" src="Art.3.jpg" alt="Drawing 3" />
+        <button class="prev-btn" onclick="changeMelukisSlide(-1)">❮</button>
+        <button class="next-btn" onclick="changeMelukisSlide(1)">❯</button>
+      </div>
+      <div class="interest-label">Drawing</div>
+    </div>
+
+    <!-- Music -->
+    <div class="interest-box">
+      <div class="image-box">
+        <iframe
+          class="yt-video"
+          src="https://www.youtube.com/embed/V9PVRfjEBTI?autoplay=1&mute=1&loop=1&playlist=V9PVRfjEBTI"
+          title="Music Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="interest-label">Music</div>
+    </div>
+
+    <!-- K-Drama -->
+    <div class="interest-box">
+      <div class="image-box">
+        <video class="active" src="vd2kdrama.mp4" controls autoplay muted loop></video>
+      </div>
+      <div class="interest-label">K-Drama</div>
+    </div>
+
+    <!-- Sport -->
+    <div class="interest-box sport-center">
+      <div class="image-box">
+        <video class="active" src="vd1.mp4" controls autoplay muted loop></video>
+      </div>
+      <div class="interest-label">Sport (Taekwondo)</div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Anis Sofea. Thank you for visiting!
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slideshow .slide-img");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    function changeSlide(step) {
+      currentIndex = (currentIndex + step + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(() => changeSlide(1), 3000);
+
+    let melukisIndex = 0;
+    const melukisSlides = document.querySelectorAll(".slideshow-melukis .melukis-slide");
+
+    function showMelukisSlide(index) {
+      melukisSlides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    function changeMelukisSlide(step) {
+      melukisIndex = (melukisIndex + step + melukisSlides.length) % melukisSlides.length;
+      showMelukisSlide(melukisIndex);
+    }
+
+    showMelukisSlide(melukisIndex);
+  </script>
+</body>
+</html>
+
+

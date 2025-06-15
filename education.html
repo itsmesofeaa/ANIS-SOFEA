@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - It'smeanissofea</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2e1d33;
+      background-image: url('2.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #34233c;
+      padding: 30px;
+      text-align: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #34233c;
+      margin: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #bd5aee;
+      padding: 0;
+      margin: 0;
+      top: 48px;
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    nav ul ul li a {
+      padding: 10px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #f0bafc;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    .edu-card {
+      background: #3f2a4f;
+      padding: 20px;
+      border-radius: 18px;
+      margin: 60px auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: justify;
+    }
+
+    .edu-card h3 {
+      font-size: 24px; 
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .edu-card em {
+      display: block;
+      font-size: 14px; 
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+
+    .edu-card p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .edu-card ul {
+      margin-left: 20px;
+    }
+
+    .edu-card ul li {
+      margin-bottom: 8px;
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 210px;
+      height: 220px;
+      margin: 0 auto 25px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      border: 5px solid #c177b8;
+      box-shadow: 0 8px 18px rgba(202, 25, 182, 0.4);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #34233c;
+      color: #FFFFFF;
+      border-top: 2px solid #ffffff;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul ul {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-top: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>It'smeanissofea</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li>
+        <a href="#">More</a>
+        <ul>
+          <li><a href="achievement.html">Achievement</a></li>
+          <li><a href="interest.html">My Interest</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Educational Background</h2>
+
+    <div class="edu-card">
+      <div class="image-container">
+        <img src="skal.jpg" alt="SK Abang Leman" />
+      </div>
+      <h3>SK Abang Leman, Kabong (Primary School)</h3>
+      <em>2011 – 2016</em>
+      <p>UPSR: 2Bs, 3Cs, 1D<br>UPKK: 4As, 4Bs</p>
+      <p>❈ During my five years at SK Abang Leman, I had limited communication with others, but I was very active in co-curricular activities and school programs. Some of my achievements include:</p>
+    </div>
+
+    <div class="edu-card">
+      <div class="image-container">
+        <img src="smk.jpg" alt="SMK Kabong" />
+      </div>
+      <h3>SMK Kabong (Secondary School)</h3>
+      <em>2017 – 2021</em>
+      <p>SPM Result: 2As, 3Bs, 3Cs</p>
+      <p>I evolved from an introvert to an ambivert, built friendships, and explored writing as my creative outlet. Despite being less confident in public performances, I remained active:</p>
+      <p>COVID-19 limited in-person experiences, but taught me resilience and self-expression.</p>
+    </div>
+
+    <div class="edu-card">
+      <div class="image-container">
+        <img src="ktess2.png" alt="Sixth Form College Saratok" />
+      </div>
+      <h3>Sixth Form College Saratok</h3>
+      <em>2022 – 2024</em>
+      <p>Cumulative GPA: 3.17</p>
+    </div>
+
+    <div class="edu-card">
+      <div class="image-container">
+        <img src="uitm.jpg" alt="UiTM" />
+      </div>
+      <h3>Bachelor’s Degree in Library Management</h3>
+      <em>Currently Pursuing, 2024 – Present</em>
+      <p>Universiti Teknologi MARA (UiTM)</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 It'smeanissofea
+  </footer>
+</body>
+</html>
+
+
+
