@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>It'smeanissofea</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #34233c;
+      background-image: url('2.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #34233c;
+      padding: 30px;
+      text-align: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #34233c;
+      margin: 0;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #bd5aee;
+      padding: 0;
+      margin: 0;
+      top: 48px;
+      border-radius: 8px;
+    }
+
+    nav ul ul li a {
+      padding: 10px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    nav ul ul li a:hover {
+      background-color: #f0c3ff;
+      color: #34233c;
+      transform: scale(1.05);
+    }
+
+    .welcome {
+      text-align: center;
+      font-size: 4em;
+      margin-top: 20px;
+      font-family: Brush Script MT, cursive;
+      color: #eddef7;
+    }
+
+    .profile-img {
+      display: flex;
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid #ea00ff;
+      place-content: center;
+      box-shadow: 0 0 80px #f528f5;
+      background: linear-gradient(135deg, #961996, #a350a0);
+      animation: rotate 20s linear infinite, pulse 2s ease-in-out infinite;
+      overflow: hidden;
+    }
+
+    .home-content {
+      max-width: 750px;
+      margin: 0 auto 40px auto;
+      padding: 25px;
+      background: #34233c;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      line-height: 1.8;
+      color: #FFFFFF;
+    }
+
+    .soft-green {
+      color: #edb4fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #34233c;
+      color: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 80px #f528f5;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 120px #f528f5;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* DOT-DOT / SALJI TURUN EFFECT */
+    .falling-dot {
+      position: absolute;
+      top: -10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.8;
+      animation: fall 6s linear forwards;
+    }
+
+.audio-player audio {
+  background-color: #3f2a4f;
+  border: 4px solid #a350a0;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 6px 15px rgba(131, 84, 129, 0.6);
+}
+
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+  <div class="music-container">
+    <audio id="bg-music" autoplay loop>
+      <source src="music (1).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="music-toggle" class="music-button">⏯ Play/Pause Music</button>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const toggle = document.getElementById("music-toggle");
+
+    toggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        toggle.textContent = "⏸ Pause Music";
+      } else {
+        music.pause();
+        toggle.textContent = "▶ Play Music";
+      }
+    });
+
+    // Optional: Change text after autoplay
+    window.addEventListener("load", () => {
+      toggle.textContent = music.paused ? "▶ Play Music" : "⏸ Pause Music";
+    });
+  </script>
+  <header>
+    <h1>It'smeanissofea</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skill.html">Skill</a></li>
+      <li>
+        <a href="#">More</a>
+        <ul>
+          <li><a href="achievement.html">Achievement</a></li>
+          <li><a href="interest.html">My Interest</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <div class="welcome">Welcome!</div>
+
+  <img src="aniss.jpg" alt="Profile" class="profile-img" />
+
+  <div class="home-content">
+    <h1 class="soft-green">❈ Hello, I'm Anis Sofea!! ❈</h1>
+    <h3 class="typing-text">
+      Welcome to my resume website, created as part of the IML470 course assignment. <span></span>
+    </h3>
+    <p style="text-align: justify;">
+      I am currently pursuing a Bachelor of Information Science (Hons.) in Library Management under the Faculty of Information Science. This program equips me with knowledge in information organization, digital libraries, cataloging, and user services. It also strengthens my skills in research, information literacy, and managing library systems in both physical and digital environments.
+    </p>
+    <p>This portfolio was created as part of Assignment IML470, showcasing my background, skills, and selected works.</p>
+    <p>Explore to learn more about me❊</p>
+  </div>
+
+
+
+  <footer>
+    &copy; 2025 Anis Sofea. Get to know me more!
+  </footer>
+
+  <script>
+    const dotContainer = document.createElement('div');
+    dotContainer.style.position = 'fixed';
+    dotContainer.style.top = 0;
+    dotContainer.style.left = 0;
+    dotContainer.style.width = '100%';
+    dotContainer.style.height = '100%';
+    dotContainer.style.pointerEvents = 'none';
+    dotContainer.style.zIndex = '9999';
+    document.body.appendChild(dotContainer);
+
+    function createDot() {
+      const dot = document.createElement('div');
+      dot.classList.add('falling-dot');
+      dot.style.left = `${Math.random() * window.innerWidth}px`;
+      dotContainer.appendChild(dot);
+      setTimeout(() => dot.remove(), 6000);
+    }
+
+    setInterval(createDot, 150);
+  </script>
+</body>
+</html>
